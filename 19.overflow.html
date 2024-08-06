@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border: 1px solid black;
+            /* to control the problem in line 19 we use overflow: auto to make the boxes of a, b and c come within the border of box. */
+            overflow: auto;
+        }
+        .item{
+            width: 200px;
+            height: 200px;
+            margin: 2px;
+            background-color: aquamarine;
+            border: 1px solid black;
+            /* all the boxes of a,b and c allign and the border of the box class turns out to be a single line instead of 
+            covering around the borders of a, b and c. it is called the great collapse */
+            float: left;
+        }
+        #item1{
+            float: right;
+        }
+        #item2{
+            float: right;
+        }
+        #item3{
+            float: right;
+        }
+        .container{
+            border: 1px solid black;
+            width: 500px;
+            height: 500px;
+            /* our content overflows from 500px*500px because words are more and we want to hide the overflown content. 
+            it will hide the content and won't be visible nor we can scroll it. it is kind of deleting the extra text. */
+            /* overflow: hidden; */
+            /* weneed a scroller so as to read the text. scroll comand includes both horizontal and vertical scroll bar */
+            /* overflow: scroll; */
+            /* if we use auto it will include only vertical scroll bar */
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="item" id="item1">a</div>
+        <div class="item" id="item2">b</div>
+        <div class="item" id="item3">c</div>
+    </div>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga illum dolor at nihil consectetur veniam veritatis 
+        numquam quisquam, eos eveniet deserunt. Architecto voluptatibus velit error? Dignissimos aut placeat fuga nostrum 
+        amet quidem nulla modi itaque ullam incidunt fugiat sunt voluptatibus, nesciunt ducimus quia molestiae reprehenderit 
+        saepe eum voluptatem. Dolor nisi repudiandae, quas nemo dolorem laborum explicabo ratione dolorum quidem libero illum odit. Assumenda, doloribus. Reprehenderit quod ipsam placeat maxime soluta exercitationem at. Cumque asperiores id laboriosam, velit hic aut veniam natus nihil expedita temporibus, cum placeat est odio officiis incidunt? Ea error maiores inventore molestias esse officia illum rem vero, libero repellat dicta reprehenderit ab ullam, nam exercitationem facere id, qui asperiores autem blanditiis recusandae. Dolorum, pariatur voluptatem iste voluptas sequi beatae corrupti alias illum eligendi veritatis. Ea velit, at, nisi explicabo minus blanditiis, quae quas aut quod dolore accusamus vel a. Delectus recusandae a placeat minima voluptas molestiae tenetur at, illo odio dolor perspiciatis consequatur numquam deleniti. Similique repudiandae voluptatibus maxime quisquam odit alias voluptatum quos ex. Itaque sed modi possimus, quaerat quos nesciunt unde sint, fugiat error laboriosam eveniet eius accusamus? Vel autem non molestiae unde voluptatum, nesciunt incidunt at iste officiis, distinctio tenetur dolorem quasi voluptates nostrum?Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto deleniti perspiciatis illum nostrum adipisci qui quisquam non, voluptate odit praesentium harum nam tempora minima voluptatem. Nobis, explicabo maiores aperiam ducimus at suscipit in minima quo debitis dolorum odit quae. Eligendi error mollitia, iste vel quasi vero maxime ullam accusamus consequatur perspiciatis natus expedita enim neque quis. Nesciunt magni fugit sint eaque placeat excepturi autem deleniti repellat provident, laboriosam, quod molestias, tempora ad rerum numquam eveniet? Doloremque delectus consequatur ipsam quam quaerat! Perferendis ut libero officia eos blanditiis, tempore, ullam modi aliquid dolor nobis accusantium consequatur nulla aperiam rem vel ratione necessitatibus neque placeat? Illum reiciendis numquam aspernatur explicabo nobis pariatur adipisci animi ea assumenda. Aliquid unde assumenda adipisci, ut atque sint a veniam, repellat tenetur temporibus architecto, doloribus eligendi voluptatem suscipit dolor nam itaque! Commodi nihil facere mollitia modi nesciunt inventore delectus vitae dolorem culpa. Mollitia qui repellat eius veritatis ea accusamus ipsam! Velit, consequatur consequuntur, vel cumque nostrum quidem repudiandae tempora saepe fugit commodi expedita esse deserunt eveniet animi, deleniti corporis voluptas. Eos ipsum cum iste officia quos eaque, dolores illum, fugit deleniti quo fugiat. Nam vel excepturi incidunt accusamus id architecto ab, ut officiis necessitatibus quo? Cumque, laborum?
+    </div>
+</body>
+</html>

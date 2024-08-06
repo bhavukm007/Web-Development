@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        background-color: beige;
+        border: 5px solid black;
+        margin: 2px;
+        padding: 2px;
+        /* by default flex direction is row so all the boxes allign in a row. we can allign them in column form using flex 
+        direction row reverse to reverse the order, etc. */
+        display: flex;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+        height: 800px;
+        /* center alligns content in center axis corresonding to horizontal bec flex direction is row */
+        /* justify-content: center; */
+        /* equal spaces to the right and left of every box */
+        /* justify-content: space-around; */
+        /* similarly by changing flex direction to column we can use these properties */
+        /* alligns at center of vertical axis */
+        /* align-items: center; */
+        /* stretches the boxes to the full length. for this we have to remove height command on line number 34 */
+        /* align-items: stretch; */
+        /* to place at center of both the axes */
+        justify-content: center;
+        align-items: center;
+    }
+    .box{
+        /* height: 200px; */
+        width: 200px;
+        border: 1px solid brown;
+        margin: 2px;
+        padding: 2px;
+    }
+    #box1{
+        background-color: aqua;
+    }
+    #box2{
+        background-color: blue;
+    }
+    #box3{
+        background-color: orange;
+    }
+    #box4{
+        background-color: brown;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+    </div>
+</body>
+</html>

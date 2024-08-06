@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Shortcut to make table= table>(tr>td*3)*3 -->
+<table>
+    <tr>
+        <td>Sr. No.</td>
+        <td>Name</td>
+        <td>Login</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+</table>
+
+<table border="1">
+    <thead>
+        <th>id</th>
+        <th>name</th>
+        <th>gender</th>
+        <th>age</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1234</td>
+            <td>bhavuk</td>
+            <td>male</td>
+            <td>19</td>
+        </tr>
+        <tr>
+            <td>5678</td>
+            <td>disha</td>
+            <td>female</td>
+            <td>19</td>
+        </tr>
+        <tr>
+            <td>4321</td>
+            <td>daksh</td>
+            <td>male</td>
+            <td>19</td>
+        </tr>
+        <tr>
+            <td>8765</td>
+            <td>friends</td>
+            <td>prefer not to say</td>
+            <td>1</td>
+        </tr>
+    </tbody>
+</table>
+
+<table border="1">
+    <thead>
+        <th>id</th>
+        <th>name</th>
+        <th>gender</th>
+        <th>age</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1234</td>
+            <td>bhavuk</td>
+            <td>male</td>
+            <td rowspan="3">19</td>
+        </tr>
+        <tr>
+            <td>5678</td>
+            <td>disha</td>
+            <td>female</td>
+            
+        </tr>
+        <tr>
+            <td>4321</td>
+            <td>daksh</td>
+            <td>male</td>
+            
+        </tr>
+        <tr>
+            <td>8765</td>
+            <td colspan="3">friends</td>
+            
+        </tr>
+    </tbody>
+</table>
+
+<table border="1">
+    <thead>
+        <th>id</th>
+        <th>name</th>
+        <th>gender</th>
+        <th>age</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="3" colspan="3">1234</td>
+            <td>19</td>
+        </tr>
+        <tr>
+            <td>19</td>
+        </tr>
+        <tr>
+            <td>19</td>
+        </tr>
+        <tr>
+            <td>8765</td>
+            <td>friends</td>
+            <td>prefer not to say</td>
+            <td>1</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- tried to make a table with 1234 occupying 3 rows and 3 columns, 
+19 occupying rowspan 3 and friends occupying colspan 3 but output is not desired -->
+<table border="1">
+    <thead>
+        <th>id</th>
+        <th>name</th>
+        <th>gender</th>
+        <th>age</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="3" colspan="3">1234</td>
+            <td rowspan="3">19</td>
+        </tr>
+        <tr>
+            <td>8765</td>
+            <td colspan="3">friends</td>
+        </tr>
+    </tbody>
+</table>
+
+<table border="1">
+    <tr>
+        <td>column1</td>
+        <td>column2</td>
+        <td>column3</td>
+    </tr>
+    <tr>
+        <td rowspan="2">row1 cell1</td>
+        <td>row1 cell2</td>
+        <td>row1 cell3</td>
+    </tr>
+    <tr>
+        <td>row2 cell2</td>
+        <td>row2 cell3</td>
+    </tr>
+    <tr>
+        <td colspan="3">row3 cell1</td>
+    </tr>
+</table>
+
+<table border="1">
+    <thead>
+        <th>number</th>
+        <th>full name</th>
+        <th>position</th>
+        <th>salary</th>
+        <th>type</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>bill gates</td>
+            <td>microsoft</td>
+            <td>100</td>
+            <td rowspan="4">founder</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>steve jobs</td>
+            <td>apple</td>
+            <td>200</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>larry page</td>
+            <td>google</td>
+            <td>300</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>mark zuckerberg</td>
+            <td>facebook</td>
+            <td>400</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">total expenses</td>
+            <td>10000</td>
+        </tr>
+    </tfoot>
+</table>
+
+<table border="1">
+    <thead>
+        <th>country</th>
+        <th>state</th>
+        <th>city</th>
+        <th>street</th>
+        <th>male</th>
+        <th>female</th>
+        <th>others</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="8">1</td>
+            <td rowspan="4">kerala</td>
+            <td rowspan="2">cochin</td>
+            <td>new street</td>
+            <td>500</td>
+            <td>600</td>
+            <td>6</td>
+        </tr>
+        <tr>>
+            <td>main street</td>
+            <td>300</td>
+            <td>288</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td rowspan="2">trivandrum</td>
+            <td>guru street</td>
+            <td>500</td>
+            <td>600</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>tvk street</td>
+            <td>500</td>
+            <td>600</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td rowspan="4">maharashtra</td>
+            <td rowspan="2">mumbai</td>
+            <td>krishna street</td>
+            <td>500</td>
+            <td>600</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>main street</td>
+            <td>900</td>
+            <td>1000</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td rowspan="2">surath</td>
+            <td>new street</td>
+            <td>500</td>
+            <td>600</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>billa street</td>
+            <td>700</td>
+            <td>400</td>
+            <td>60</td>
+        </tr>
+        <tr>
+            <td rowspan="2">2</td>
+            <td rowspan="2">alaska</td>
+            <td rowspan="2">aka central</td>
+            <td>new street</td>
+            <td>200</td>
+            <td>210</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>cross street</td>
+            <td>250</td>
+            <td>190</td>
+            <td>20</td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>

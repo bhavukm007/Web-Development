@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            border: 2px solid red;
+            /* 50% means it will use 50% of the immediate parent of div that i the body. it will use 50% of the view port */
+            width: 50%;
+        }
+        .parent{
+            border: 1px solid red;
+            background-color: beige;
+            /* parents width is 50% of immediate parent i.e. body which is the full view port. */
+            width: 50%;
+        }
+        .child{
+            border: 1px solid green;
+            background-color: aqua;
+            /* child div overlaps the parent div if width is full. it is observed by making width 50% of the parent, which in 
+            turn is the 50% of the view port */
+            width: 50%;
+        }
+        .container{
+            background-color: beige;
+            border: 1px solid green;
+            /* it will take 100% height of the view port(vh) */
+            height: 100vh;
+            /* it will take 50% width of the view port(vw) */
+            width: 50vw;
+        }
+        .box1{
+            border: 1px solid black;
+            font-size: 100px;
+        }
+        .set{
+            font-size: 10px;
+        }
+        .subset{
+            font-size: 10em;
+        }
+        .firstpara{
+            border: 1px solid black;
+            /* font size will be 16*5=80 */
+            font-size: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        welcome to my site
+    </div>
+    <div class="parent">
+        <div class="child">
+            child
+        </div>
+    </div>
+    <div class="container">
+        welcome to code help
+    </div>
+    <div class="box1">
+        bhavuk mahajan
+    </div>
+    <h1>hello guys</h1>
+    <div class="set">
+        <div class="subset">
+            welcome to my code
+        </div>
+    </div>
+    <p class="firstpara">
+        hello everyone
+    </p>
+
+</body>
+</html>

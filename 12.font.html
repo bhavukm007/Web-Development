@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- using an external form from google fonts and then copying the link and font family. line 22 continue  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+    <style>
+        p{
+            font-style: italic;
+            font-size: 20px;
+            /* it is a fallback system if first family is not available then use 2nd and then 3rd */
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            /* darkness */
+            font-weight: 900; 
+            /* gap between lines */
+            line-height: 50px;
+            /* here we will enter the copied font family. */
+            font-family: "Dancing Script", cursive;
+        }
+        #firstpara{
+            /* adding colour using named colour by typing background-color: yellow & color: brown;;  */
+            background-color: yellow;
+            color: brown;
+        }
+        #secondpara{
+            /* adding colour using rgb values by typing background-color: rgb(red, green blue); */
+            background-color: rgb(100, 109, 192);
+            /* here we will write rgba where a is the alpha value which is used to set transparency. at 0 it will be completely 
+            transparent. it can be used in background as well */
+            color: rgba(0, 255, 238, 1);
+        }
+        #thirdpara{
+            /* adding colour using hexadecmal values. search hexadecimal colour picker in google. first 2 represent red 
+            next 2 green and next 2 blue*/
+            background-color: #ffab23;
+        }
+        .firstclass{
+            /* adding colour using hue saturation lightness. search and choose a colour using colour picker. hue is the colour 
+            from the wheel saturation is the intensity and lightness is darkness or lightness of colour */
+            background-color: hsl(0, 100%, 50%);
+        }
+    </style>
+</head>
+<body>
+    <h2>welcome to website</h2>
+    <p id="firstpara">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis similique qui id omnis esse modi explicabo nemo sequi 
+        voluptate magni.
+    </p>
+    <p id="secondpara">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam eos iure modi. In inventore laboriosam, 
+        tempore maiores molestias doloremque, veritatis vel repellat ipsam quae eveniet? Recusandae ipsam est nobis? Deserunt.
+    </p>
+    <p id="thirdpara">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque ea dolor, iusto corporis labore soluta provident 
+        perferendis repellat commodi modi vel ab ratione et, quia dolorem porro voluptatum fugit nisi? Illo error perferendis 
+        voluptatum! Beatae ratione praesentium nobis quaerat at!
+    </p>
+    <p class="firstclass">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi necessitatibus dolorem explicabo possimus sequi ut 
+        numquam praesentium omnis eaque iste. Iure facere illum dignissimos ipsa?
+    </p>
+</body>
+</html>

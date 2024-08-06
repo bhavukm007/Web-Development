@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-color: aqua;
+            height: 400px;
+            width: 400px;
+            border: 3px solid black;
+        }
+        /* @media (min-width: 500px){
+            .box{
+                NOTE- above 500px background colour will be green. if we do max width, 0 to 500px will be green and above 500px it 
+                will be aqua
+                background-color: green;
+            }
+        }  */
+        @media (min-width: 300px) and (max-width: 500px) {
+            .box{
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        hello
+    </div>
+</body>
+</html>

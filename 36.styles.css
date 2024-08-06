@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+.container{
+    max-width: 80vw;
+    /* top-bottom and left-right padding */
+    padding: 2rem 1rem;
+    /* top-bottom margin is zero and is placed at center */
+    margin: 0 auto;
+    /* background-color: aqua; */
+}
+a{
+    /* to remove underline */
+    text-decoration: none;
+}
+.headercontainer{
+    margin-bottom: 2.8rem;
+}
+.headertitle{
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+.headerdescription{
+    max-width: 568px;
+    text-align: center;
+    color: rgb(105, 99, 99);
+    /* top-bottom=0 and left-right=auto */
+    margin: 0 auto;
+}
+.maincontainer{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(1,1fr);
+}
+@media(min-width:730px){
+    .maincontainer{
+       grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(min-width:1100px){
+    .maincontainer{
+       grid-template-columns: repeat(3,1fr);
+    }
+}
+@media(min-width:1430px){
+    .maincontainer{
+       grid-template-columns: repeat(4,1fr);
+    }
+}
+.cardcontainer{
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    border: 1px solid rgb(233, 224, 224);
+    border-radius: 8px;
+}
+.cardimagecontainer{
+    /* container is made relative so that we can make image absolute so as to overlap container */
+    position: relative;
+    overflow: hidden;
+    height: 7rem;
+}
+@media (min-width:768px) {
+    .cardimagecontainer{
+        height: 12rem;
+    }
+    
+}
+.cardimage{
+    /* to prevent cutting of image */
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.cardtitlecontainer{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+.cardcontainer:hover .cardimage{
+    /* so as to scale image upon hovering anywhere on the card */
+    transform: scale(1.1);
+    transition-duration: 500ms;
+}
+.cardtitle{
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(25, 23, 23);
+    line-height: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+.cardtitleanchor:hover .cardtitle{
+    color: rgb(59, 59, 216);
+}
+.carddescription{
+    color: rgb(113, 107, 107);
+    font-size: 1rem;
+}
+.cardfootercontainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    padding: 0 1.5rem;
+    padding-bottom: 1.5rem;
+}
+.authorcontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.authoravatarcontainer{
+    height: 2.5rem;
+    width: 2.5rem;
+    overflow: hidden;
+    border: 1px solid rgb(150, 147, 147);
+    border-radius: 50%;
+    background-color: rgb(221, 221, 221);
+}
+.authorinfocontainer{
+    display: flex;
+    flex-direction: column;
+}
+.authorname{
+    color: rgb(38, 38, 149);
+}
+.authordate{
+    color: rgb(136, 126, 126);
+}
+.cardtagcontainer{
+    color: rgb(55, 88, 117);
+    font-size: 0.79rem;
+    border: 1px solid rgb(76, 71, 71);
+    border-radius: 4px;
+    line-height: 1.3rem;
+    padding: 0.25rem 0.5rem;
+    color: grey;
+}

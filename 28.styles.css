@@ -1,0 +1,32 @@
+.box{
+    width: 400px;
+    height: 400px;
+    background-color: beige;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    /* property, duration, easing function, delay */
+    transition: all 3s linear 1s;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    /* rotating the box */
+    /* transform: rotate(-360deg); */
+    /* scaling the box considering default size as 1 */
+    /* transform: scale(.5); */
+    /* tilting the box */
+    /* transform: skew(-45deg); */
+    /* translate tells the movement. first specify x then y */
+    transform: translate(500px,100px);
+}
+p{
+    font-size: 36px;
+}

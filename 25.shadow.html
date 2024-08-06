@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            /* we can define variables under root so as to use them all over the code */
+            --primary-color: brown;
+            --custom-width: 330px;
+        }
+        .container{
+            background-color: beige;
+            height: 650px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items:center ;
+        }
+        .box{
+            /* suppose we have used brown colour at multiple places and we want to change all of them to red we can use variables 
+            so as to change colour overall. this can be used for width and other tags as well it is applicable only within the brackets 
+            like in this case it will be applicable only in .box{}. check line 25, 26, 28, 30 and 8. */
+            --primary-color: brown;
+            --custom-width: 330px;
+            background-color: aquamarine;
+            width: var(--custom-width);
+            height: 330px;
+            border: 1px solid var(--primary-color);
+            margin: 5px;
+            padding: 5px;
+            /* shadow can be added to the box. x-offset y-offset colour. we can use - sign to change the direction of shadow. */
+            /* box-shadow: -10px 15px brown/var(--primary-color); */
+            /* blur shadow can be added to the box. x-offset y-offset blur-radius colour. negative blur radius is not possible. */
+            /* box-shadow: 10px 15px 5px brown/var(--primary-color); */
+            /* spread radius- how much the shadow spreads can be added to the box. x-offset y-offset blur-radius spread radius colour */
+            /* box-shadow: 10px 15px 5px 20px brown; */
+            /* inset function brings shadow inside */
+            /* box-shadow: inset 10px 15px brown/var(--primary-color); */
+            /* to apply multiple shadows */
+            /* box-shadow: 10px 15px red, 15px 8px green; */
+        }
+        #head1{
+            /* text shadow= x-offset y-offset blur-radius colour */
+            /* text-shadow: 12px 13px 1px white; */
+            /* text shadow= colour x-offset y-offset blur-radius */
+            /* text-shadow: yellow 12px 13px 2px; */
+            /* text-shadow: colour x-offset y-offset */
+            /* text-shadow: white 12px 13px; */
+            /* text-shadow: x-offset y-offset. default black colour */
+            /* text-shadow: 12px 13px; */
+            /* multiple text shadows */
+            text-shadow: 12px 13px 1px white, 13px 16px blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="25.image.jpg" alt="nirvana" height="180px" width="130px">
+            <h2 id="head1">welcome</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, voluptas molestiae vel ipsum, maxime 
+                debitis nulla error delectus aut consequatur sed quam vitae ipsa. Tenetur.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

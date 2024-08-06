@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /* by using border box there will be no change in the size of the box as it will be fixed there will be change in the 
+            content size */
+            box-sizing: border-box;
+        }
+        .box{
+            /* converting block to inline */
+            display: inline;
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            padding: 100px;
+        }
+        span{
+            border: 2px solid green;
+            /* custom width and height cannot be applied on inline elements */
+            width: 800px;
+            height: 400px;
+            /* only horizontal margin appears */
+            margin: 10px;
+            /* padding is applied in all directions */
+            padding: 15px;
+            /* converting inline to block */
+            display: block
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        welcome to code help
+    </div>
+    <span>
+        this is bhavuk mahajan
+    </span>
+    <span>
+        this is bhavuk mahajan 2.0
+    </span>
+</body>
+</html>

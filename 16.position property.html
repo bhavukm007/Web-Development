@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid black;
+        }
+        img{
+            margin: 10px;
+        }
+        /* marking div as relative so that we can set an image absolute wrt div */
+        .container{
+            position: relative;
+            /* height is increased to see the effect of fixed position upon scrolling. line 33 */
+            height: 1000px;
+            background-color: blanchedalmond;
+        }
+        /* .image2{ */
+            /* position property is static by default and we cannot mention any property on it like this */
+            /* top: 100px; */
+            /* using relative position */
+            /* position: relative;
+            top: 100px;
+            left: 100px; */
+            /* third image hides behind second on marking position absolute. it is seen upon moving image 100px from top */
+            /* position: absolute;
+            top: 100px; */
+        /* } */
+        .image4{
+            /* forth image remains intact on its position */
+            position: fixed;
+            top: 200px;
+        }
+        .image3{
+            /* sticky remains in its parent container and is similar to fixed position. main difference is fixed img remains fixed in 
+            the other container as well whereas sticky remains fixed in its parent container and then goes up upon shifting to 
+            other div. it is used in websites where there is contact button chat bot button etc. */
+            position: sticky;
+            top: 100px;
+        }
+        .box{
+            background-color: aquamarine;
+            height: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="16.image.jpg" alt="poster1" width="300px" height="300px" class="image1">
+        <img src="16.1.image.jpg" alt="poster2" width="300px" height="300px" class="image2">
+        <img src="16.2.image.jpg" alt="poster3" width="300px" height="300px" class="image3">
+        <img src="16.3.image.jpg" alt="poster4" width="300px" height="300px" class="image4">
+    </div>
+    <div class="box"></div>
+</body>
+</html>

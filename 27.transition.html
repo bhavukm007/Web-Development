@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        height: 400px;
+        width: 400px;
+        background-color: beige;
+        border: 2px solid black;
+        /* here transition property is set on all. so the colour change will also be gradual. if we set transition property as 
+        width colour change will be sudden */
+        /* transition-property: all;
+        transition-duration: 4s;
+        transition-delay: 0s;
+        transition-timing-function: ease; */
+        /* shorthand-notation= property, duration */
+        /* transition: all 2s; */
+        /* shorthand-notation= property, duration, delay */
+        transition: all 2s 5s;
+        /* shorthand-notation= property, timing function */
+        transition: all 2s ease-in;
+        /* shorthand-notation= property, duration, easing function, delay */
+        transition: all 2s ease-in 5s;
+        /* shorthand-notation= property using comma, duration */
+        transition: width 2s, height 5s;
+    }
+    /* here we are defining a state using pseudo class hover. it means upon hovering the box element following transition is applied */
+    .box:hover{
+        width: 1500px;
+        height: 800px;
+        background-color: blue;
+    }
+</style>
+<body>
+    <div class="box"></div>
+</body>
+</html>

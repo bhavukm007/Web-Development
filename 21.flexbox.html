@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        background-color: beige;
+        border: 5px solid black;
+        margin: 2px;
+        padding: 2px;
+        display: flex;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+        height: 800px;
+        justify-content: start;
+        align-items: start;
+        /* upon contracting the work area we see that there is spacing between the blocks when they shift to the nextline. 
+        we can handle this spacing using align content */
+        align-content: start;
+    }
+    .box{
+        height: 200px;
+        width: 200px;
+        border: 1px solid brown;
+        margin: 2px;
+        padding: 2px;
+        /* occupies all the available space */
+        /* flex-grow: 1; */
+    }
+    #box1{
+        background-color: aqua;
+        /* taking first box to the end. we can give order as 4 or 5 as well */
+        /* order: 500; */
+        /* box 1 shrinks with speed 4 times. turn of the flex wrap cpmmand in line 16 */
+        /* flex-shrink: 4; */
+        /* grows 5 times faster than other boxes */
+        /* flex-grow: 5; */
+        /* used to allign items in cross direction */
+        align-self: center;
+    }
+    #box2{
+        background-color: blue;
+        align-self: end;
+    }
+    #box3{
+        background-color: orange;
+        align-self: start;
+    }
+    #box4{
+        background-color: brown;
+        /* taking last box to first position */
+        /* order: -1; */
+        /* used to set width of the box */
+        /* flex-basis: 400px; */
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box" id="box1">box1</div>
+        <div class="box" id="box2">box2</div>
+        <div class="box" id="box3">box3</div>
+        <div class="box" id="box4">box4</div>
+    </div>
+</body>
+</html>

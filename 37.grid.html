@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .body{
+        width: 100%;
+        height: 10%;
+    }
+    .container{
+        display: grid;
+        background-color: rgb(71, 65, 65);
+        width: 100%;
+        height: 10%;
+        padding: 4rem;
+        gap: 1rem;
+        /* normal way of specifying columns and to make responsive we have to use @media command */
+        /* grid-template-columns: repeat(3,1fr); */
+        /* we can use this feature where number of columns will be auto and max width can be 500px and min 200px */
+        grid-template-columns: repeat(auto-fit, minmax(200px,500px));
+    }
+    .item{
+        border: 3px solid black;
+        background-color: rgb(85, 85, 208);
+        color: white;
+        padding: 1rem;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="item">a</div>
+        <div class="item">b</div>
+        <div class="item">c</div>
+        <div class="item">d</div>
+        <div class="item">e</div>
+        <div class="item">f</div>
+        <div class="item">g</div>
+        <div class="item">h</div>
+        <div class="item">i</div>
+        <div class="item">j</div>
+        <div class="item">k</div>
+    </div>
+</body>
+</html>

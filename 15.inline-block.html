@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 10;
+            padding: 0;
+            /* by using border box there will be no change in the size of the box as it will be fixed there will be change in the 
+            content size */
+            box-sizing: border-box;
+        }
+        span{
+            border: 2px solid green;
+            /* custom width and height cannot be applied on inline elements */
+            width: 300px;
+            height: 300px;
+            /* only horizontal margin appears */
+            margin: 5px;
+            /* padding is applied in all directions */
+            padding: 5px;
+            /* using inline-block element */
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <span>
+        this is bhavuk mahajan
+    </span>
+    <span>
+        this is bhavuk mahajan 2.0
+    </span>
+
+</body>
+</html>
